@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment #7</title>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+</head>
+
+<body>
+    <div class="navbar">
+        <div class="dropdown">
+            <button class="dropbtn">Course
+            </button>
+            <div class="dropdown-content">
+                <a href="https://app.tophat.com/e/776977/lecture">TopHat</a>
+                <a href="https://drive.google.com/drive/folders/1Ak_kUW07RMNZgiEnxxbbLKjSg__lKE6j">Google Drive</a>
+                <a href="https://gaia.cs.umass.edu/kurose_ross/eighth.php">Kurose and Ross</a>
+                <a href="https://www.w3schools.com/">w3schools</a>
+                <a href="https://www.geeksforgeeks.org/web-development/">geeksforgeeks</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">Browser
+            </button>
+            <div class="dropdown-content">
+                <a href="./navigator.html">Navigator</a>
+                <a href="./window.html">Window</a>
+                <a href="./screen.html">Screen</a>
+                <a href="./location.html">Location</a>
+                <a href="./geolocation.html">Geolocation</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">About
+            </button>
+            <div class="dropdown-content">
+                <a href="./description.html">Description</a>
+                <a href="./contact.html">Contact</a>
+            </div>
+        </div>
+    </div>
+
+    <h1 style="color:white";>Geolocation</h1>
+
+    <p style="color:white">Click the button to get your coordinates.</p>
+
+    <button onclick="getLocation()">Try It</button>
+
+    <p id="demo" style="color:white";></p>
+
+    <script>
+        var x = document.getElementById("demo");
+
+        function getLocation() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(showPosition);
+            } else {
+                x.innerHTML = "Geolocation is not supported by this browser.";
+            }
+        }
+
+        function showPosition(position) {
+            x.innerHTML = "Latitude: " + position.coords.latitude +
+                "<br>Longitude: " + position.coords.longitude;
+        }
+    </script>
+</body>
+
+</html>

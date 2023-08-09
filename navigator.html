@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment #7</title>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+</head>
+
+<body>
+    <div class="navbar">
+        <div class="dropdown">
+            <button class="dropbtn">Course
+            </button>
+            <div class="dropdown-content">
+                <a href="https://app.tophat.com/e/776977/lecture">TopHat</a>
+                <a href="https://drive.google.com/drive/folders/1Ak_kUW07RMNZgiEnxxbbLKjSg__lKE6j">Google Drive</a>
+                <a href="https://gaia.cs.umass.edu/kurose_ross/eighth.php">Kurose and Ross</a>
+                <a href="https://www.w3schools.com/">w3schools</a>
+                <a href="https://www.geeksforgeeks.org/web-development/">geeksforgeeks</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">Browser
+            </button>
+            <div class="dropdown-content">
+                <a href="./navigator.html">Navigator</a>
+                <a href="./window.html">Window</a>
+                <a href="./screen.html">Screen</a>
+                <a href="./location.html">Location</a>
+                <a href="./geolocation.html">Geolocation</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">About
+            </button>
+            <div class="dropdown-content">
+                <a href="./description.html">Description</a>
+                <a href="./contact.html">Contact</a>
+            </div>
+        </div>
+    </div>
+
+    <h1 style="color:white">The Navigator Object</h1>
+    
+    <p style="color:white">The appName property returns the application name of the browser:</p>
+    
+    <p id="demo_appName" style="color:white"></p>
+    
+    <p style="color:white">Strange enough, "Netscape" is the application name for IE11, Chrome, Firefox, and Safari.</p>
+    
+    <script>
+        document.getElementById("demo_appName").innerHTML =
+            "navigator.appName is " + navigator.appName;
+    </script>
+    
+    <p style="color:white">The product property returns the product name of the browser.</p>
+    
+    <p style="color:white">Do not rely on it! Most browsers returns "Gecko" as product name!</p>
+    
+    <p id="demo_product" style="color:white"></p>
+    
+    <script>
+        document.getElementById("demo_product").innerHTML =
+            "navigator.product is " + navigator.product;
+    </script>
+
+    <p style="color:white">The appVersion property returns version information about the browser:</p>
+    
+    <p id="demo_appVersion" style="color:white"></p>
+    
+    <script>
+        document.getElementById("demo_appVersion").innerHTML = navigator.appVersion;
+    </script>
+
+    <p style="color:white">The userAgent property returns the user-agent header sent by the browser to the server:</p>
+    
+    <p id="demo_userAgent" style="color:white"></p>
+    
+    <script>
+        document.getElementById("demo_userAgent").innerHTML =
+            navigator.userAgent;
+    </script>
+
+    <p style="color:white">The platform property returns the browser platform (operating system):</p>
+    
+    <p id="demo_platform" style="color:white"></p>
+    
+    <script>
+        document.getElementById("demo_platform").innerHTML =
+            "navigator.platform is " + navigator.platform;
+    </script>
+
+    <p style="color:white">The language property returns the browser's language:</p>
+    
+    <p id="demo_language" style="color:white"></p>
+    
+    <script>
+        document.getElementById("demo_language").innerHTML =
+            "navigator.language is " + navigator.language;
+    </script>
+
+</body>
+
+</html>
